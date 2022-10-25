@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ImageButton
 
 const val SPIN_MESSAGE = "Spins"
 const val WIN_MESSAGE = "Wins"
@@ -25,9 +26,9 @@ class MainActivity : AppCompatActivity()
 
         Log.d("ONEARMBANDIT","Spin to Play")
 
-        val spinButton: Button = findViewById(R.id.button)
-        val helpButton: Button = findViewById(R.id.button2)
-        val statsButton: Button = findViewById(R.id.button3)
+        val spinButton: ImageButton = findViewById(R.id.imageButton6)
+        val helpButton: ImageButton = findViewById(R.id.imageButton3)
+        val statsButton: ImageButton = findViewById(R.id.imageButton5)
 
 
 
