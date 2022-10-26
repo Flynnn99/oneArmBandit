@@ -73,30 +73,9 @@ class MainActivity : AppCompatActivity()
         val rsImage: ImageView = findViewById(R.id.imageView4)
 
 
-        val drawableResource = when (spins.spin())
-        {
-            1 -> R.drawable.viking
-            2 -> R.drawable.ninja
-            3 -> R.drawable.samurai
-            else -> R.drawable.bandit
-        }
-
-        val drawableResource2 = when (spins.spin())
-        {
-            1 -> R.drawable.viking
-            2 -> R.drawable.ninja
-            3 -> R.drawable.samurai
-            else -> R.drawable.bandit
-        }
-
-        val drawableResource3 = when (spins.spin() )
-        {
-            1 -> R.drawable.viking
-            2 -> R.drawable.ninja
-            3 -> R.drawable.samurai
-            else -> R.drawable.bandit
-        }
-
+        val drawableResource = drawable(spins.spin())
+        val drawableResource2 = drawable(spins.spin())
+        val drawableResource3 = drawable(spins.spin())
 
         spinImage.setImageResource(drawableResource)
         spinImage2.setImageResource(drawableResource2)
@@ -120,9 +99,24 @@ class MainActivity : AppCompatActivity()
 
         Log.d("Num of Wins", "${numOfWins}")
         Log.d("Num of Spins", "${numOfSpins}")
+        Log.d("Ratio", "${averageWinPercent}")
+        Log.d("Random Number", "${spins}")
 
 
-        Log.d("Num of Spins", "${averageWinPercent}")
+    }
+
+    fun drawable(num: Int): Int
+    {
+
+        val drawableResource = when (num)
+        {
+            1 -> R.drawable.viking
+            2 -> R.drawable.ninja
+            3 -> R.drawable.samurai
+            else -> R.drawable.bandit
+        }
+        Log.d("num: ", "${num}")
+        return drawableResource
     }
 
     class OneArmBandit(private val numSides: Int)
@@ -130,7 +124,7 @@ class MainActivity : AppCompatActivity()
 
         fun spin(): Int {
             return (1..numSides).random()
-
+            Log.d("Random Number", "${(1..numSides).random()}")
         }
     }
 
