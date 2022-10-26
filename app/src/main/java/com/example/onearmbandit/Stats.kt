@@ -7,10 +7,18 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 
-class Stats : AppCompatActivity() {
+private const val TAG = "Stats"
+
+class Stats : AppCompatActivity()
+{
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stats)
+        Log.d(TAG, "VIEW YOUR STATS")
+
+
 
 
         val homeButton: ImageButton = findViewById(R.id.imageButton2)

@@ -11,6 +11,7 @@ import android.widget.ImageButton
 const val SPIN_MESSAGE = "Spins"
 const val WIN_MESSAGE = "Wins"
 const val WIN_LOSS_AVG_MESSAGE = "Averages"
+private const val TAG = "OneArmBandit"
 
 class MainActivity : AppCompatActivity()
 {
@@ -19,12 +20,13 @@ class MainActivity : AppCompatActivity()
     private var averageWinPercent = 0.0
 
 
+
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d("ONEARMBANDIT","Spin to Play")
+        Log.d(TAG,"Spin to Play")
 
         val spinButton: ImageButton = findViewById(R.id.imageButton6)
         val helpButton: ImageButton = findViewById(R.id.imageButton3)
@@ -102,13 +104,13 @@ class MainActivity : AppCompatActivity()
 
         if(drawableResource == drawableResource2 && drawableResource2 == drawableResource3)
         {
-            rsImage.setImageResource(R.drawable.winner)
+            rsImage.setImageResource(R.drawable.winner2)
             numOfWins++
 
         }
         else
         {
-            rsImage.setImageResource(R.drawable.loser)
+            rsImage.setImageResource(R.drawable.loser2)
 
         }
         numOfSpins ++

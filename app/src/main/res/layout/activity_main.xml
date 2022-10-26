@@ -47,15 +47,15 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="268dp"
-        android:layout_height="166dp"
+        android:layout_width="305dp"
+        android:layout_height="214dp"
         android:layout_marginStart="71dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="72dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:srcCompat="@drawable/loser" />
+        app:srcCompat="@drawable/loser2" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -83,8 +83,8 @@
 
     <ImageButton
         android:id="@+id/imageButton6"
-        android:layout_width="113dp"
-        android:layout_height="111dp"
+        android:layout_width="117dp"
+        android:layout_height="128dp"
         android:layout_marginStart="13dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="27dp"
